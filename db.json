@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Aniket",
+      "email": "abc@gmail.com",
+      "salary": "10000"
+    },
+    {
+      "id": 3,
+      "name": "Preeti Rampratap Maurya",
+      "email": "preetimaurya049@gmail.com",
+      "salary": "50000"
+    }
+  ]
+}
