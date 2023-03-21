@@ -22,8 +22,10 @@ export class DashboardComponent implements OnInit {
       id : [''],
       name : [''],
       email : [''],
+      project : [''],
+      profile : [''],
       salary : ['']
-    }); 
+    });
   }
 
   addEmployee(){
@@ -31,6 +33,8 @@ export class DashboardComponent implements OnInit {
     this.empObj.id = this.empDetail.value.id;
     this.empObj.name = this.empDetail.value.name;
     this.empObj.email = this.empDetail.value.email;
+    this.empObj.project = this.empDetail.value.project;
+    this.empObj.profile = this.empDetail.value.profile;
     this.empObj.salary = this.empDetail.value.salary;
 
     this.empService.addEmployee(this.empObj).subscribe(res=>{
@@ -54,6 +58,8 @@ export class DashboardComponent implements OnInit {
     this.empDetail.controls['id'].setValue(emp.id);
     this.empDetail.controls['name'].setValue(emp.name);
     this.empDetail.controls['email'].setValue(emp.email);
+    this.empDetail.controls['project'].setValue(emp.project);
+    this.empDetail.controls['profile'].setValue(emp.profile);
     this.empDetail.controls['salary'].setValue(emp.salary);
   }
 
@@ -61,6 +67,8 @@ export class DashboardComponent implements OnInit {
     this.empObj.id = this.empDetail.value.id;
     this.empObj.name = this.empDetail.value.name;
     this.empObj.email = this.empDetail.value.email;
+    this.empObj.project = this.empDetail.value.project;
+    this.empObj.profile = this.empDetail.value.profile;
     this.empObj.salary = this.empDetail.value.salary;
 
     this.empService.updateEmployee(this.empObj).subscribe(res=>{

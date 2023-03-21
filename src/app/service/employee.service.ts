@@ -17,16 +17,16 @@ export class EmployeeService {
 
   constructor(private http : HttpClient) {
 
-    this.serviceEmpUrl = "http://localhost:9091/emp/addEmployee";
-    this.addEmpUrl = "http://localhost:9091/emp/addEmployee";
-    this.getEmpUrl = "http://localhost:9091/emp/getAllEmployees";
-    this.updateEmpUrl = "http://localhost:9091/emp/updateEmployee";
-    this.deleteEmpUrl = "http://localhost:9091/emp/deleteEmployeeByID"
+    this.serviceEmpUrl = "http://localhost:9693/emp/addEmployee";
+    this.addEmpUrl = "http://localhost:9693/emp/addEmployee";
+    this.getEmpUrl = "http://localhost:9693/emp/getAllEmployees";
+    this.updateEmpUrl = "http://localhost:9693/emp/updateEmployee";
+    this.deleteEmpUrl = "http://localhost:9693/emp/deleteEmployeeByID"
    }
 
    addEmployee(emp : Employee) : Observable<Employee>{
       return this.http.post<Employee>(this.addEmpUrl, emp)
-      
+
    }
 
    getAllEmployee(): Observable<Employee[]>{

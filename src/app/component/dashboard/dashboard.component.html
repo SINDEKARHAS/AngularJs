@@ -10,14 +10,16 @@
           </div>
         </div>
     </nav>
-  
+
     <table class="table table-hover">
       <thead>
         <tr>
-          <th scope="col">Employee ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Email</th>
+          <th scope="col">Employee ID </th>
+          <th scope="col">Name </th>
+          <th scope="col">Email </th>
           <th scope="col">Salary</th>
+          <th scope="col">Project</th>
+          <th scope="col">Profile</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -27,6 +29,8 @@
           <td>{{employee.name}}</td>
           <td>{{employee.email}}</td>
           <td>{{employee.salary}}</td>
+          <td>{{employee.project}}</td>
+          <td>{{employee.profile}}</td>
           <td>
             <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" (click)="editEmployee(employee)">Edit</button>
             <button type="button" class="btn btn-outline-danger" (click)="deleteEmployee(employee)">Delete</button>
@@ -40,21 +44,32 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Add new Employee</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add new Employee+</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form [formGroup] = "empDetail">
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Name</label>
+                      <label for="exampleInputEmail1" class="form-label">Name:</label>
                       <input type="text" formControlName="name" id="name" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                       <label for="exampleInputEmail1" class="form-label">Email</label>
+                       <label for="exampleInputEmail1" class="form-label">Email:</label>
                        <input type="email" formControlName="email" id="email" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                       <label for="exampleInputEmail1" class="form-label">Salary</label>
+               <label for="exampleInputproject1" class="form-label">Project:</label>&nbsp;
+               <input type="project" formControlName="project" id="project" aria-describedby="projectHelp">
+            </div>
+
+                  <div class="mb-3">
+              <label for="exampleInputprofile1" class="form-label">Profile:</label>&nbsp;
+              <input type="profile" formControlName="profile" id="profile" aria-describedby="profileHelp">
+           </div>
+
+
+                    <div class="mb-3">
+                       <label for="exampleInputEmail1" class="form-label">Salary:</label>
                        <input type="text" formControlName="salary" id="salary" aria-describedby="emailHelp">
                     </div>
                     <div class="modal-footer">
@@ -66,7 +81,7 @@
           </div>
         </div>
     </div>
-  
+
     <!-- Edit Employee Modal -->
     <div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -85,6 +100,17 @@
                        <label for="exampleInputEmail1" class="form-label">Email</label>
                        <input type="email" formControlName="email" id="email" aria-describedby="emailHelp">
                     </div>
+
+                    <div class="mb-3">
+               <label for="exampleInputproject1" class="form-label">Project:</label>&nbsp;
+               <input type="project" formControlName="project" id="project" aria-describedby="projectHelp">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputprofile1" class="form-label">Profile:</label>&nbsp;
+              <input type="profile" formControlName="profile" id="profile" aria-describedby="profileHelp">
+           </div>
+
                     <div class="mb-3">
                        <label for="exampleInputEmail1" class="form-label">Salary</label>
                        <input type="text" formControlName="salary" id="salary" aria-describedby="emailHelp">
