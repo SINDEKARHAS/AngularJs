@@ -15,14 +15,37 @@ public class Employee {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
-	@Column(name="ename")
-	private String ename;
+	@Column(name="name")
+	private String name;
+	
+	@Column(name="project")
+	private String project;
 	
 	@Column(name="email")
 	private String email;
 	
+	@Column(name="profile")
+	private String profile;
+	
 	@Column(name="salary")
 	private int salary;
+
+	public String getproject(){
+	return project;
+	}
+	public void setproject(String project)
+	{
+	this.project = project;
+	}
+	
+	public String getprofile(){
+	return profile;
+	}
+	public void setprofile(String profile)
+	{
+	this.profile = profile;
+	}
+
 	
 	public int getId() {
 		return id;
@@ -31,10 +54,10 @@ public class Employee {
 		this.id = id;
 	}
 	public String getName() {
-		return ename;
+		return name;
 	}
 	public void setName(String name) {
-		this.ename = name;
+		this.name = name;
 	}
 	public String getEmail() {
 		return email;

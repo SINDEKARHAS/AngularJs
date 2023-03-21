@@ -40,6 +40,8 @@ public class EmployeeService {
 		existingEmp.setName(employee.getName());
 		existingEmp.setEmail(employee.getEmail());
 		existingEmp.setSalary(employee.getSalary());
+		existingEmp.setprofile(employee.getprofile());
+		existingEmp.setproject(employee.getproject());
 		
 		return employeeRepository.save(employee);
 
